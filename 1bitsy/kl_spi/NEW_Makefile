@@ -1,0 +1,22 @@
+
+
+#ALL YOUR COMPILERZ BELONG TO UZ!
+# CFLAGS=-std=c99
+
+OBJS = ../common/button_boot.o  
+
+BINARY = klspi
+
+#somehow this gives me math/cos/sin ??
+LDLIBS += -lm 
+
+##PRINTF
+#LDFLAGS += --specs=rdimon.specs -lc -lrdimon  
+
+LDFLAGS += -specs=nosys.specs -specs=rdimon.specs -lc -lrdimon
+
+
+LDSCRIPT = ../stm32f4-1bitsy.ld
+
+include ../Makefile.include
+
